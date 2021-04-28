@@ -1,0 +1,35 @@
+/* Imported Fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
+body {
+    font-family: 'Dancing Script', cursive;
+}
+
+.jumbotron{
+    font-family: 'Dancing Script', cursive;
+    background-image: url('https://www.jessicagavin.com/wp-content/uploads/2020/07/how-to-cook-pasta-3-1200.jpg');
+    background-size:contain;
+    height: 50%;
+    text-align-last: center;
+    color:black;
+    text-shadow: 2px 2px 2px #000;
+}
+
+h2{
+    margin: 0 auto;
+    width: 100%;
+    color: black;
+    text-align: "center";
+    padding: 6px;
+    margin-bottom:20px;
+}
+
+p{
+    margin: 0 auto;
+    width: 100%;
+    color: black;
+    text-align: "center";
+    padding: 6px;
+    font-size:larger;
+}
