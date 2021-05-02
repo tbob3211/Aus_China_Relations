@@ -4,7 +4,7 @@ window.onload = function () {
     var it = document.getElementById("main");
     window.onscroll = function () {
         var t = document.documentElement.scrollTop || document.body.scrollTop;
-        if (t > 1430) {
+        if (t > 450) {
             mydiv.style.position = "fixed";                    
             mydiv.style.top = "90px";
             mydiv.style.width = "100%";
@@ -26,12 +26,11 @@ $(document).ready(function () {
  
     var i = 0;
 
-    var clone = $(".imgdiv .imageul li").first().clone();//克隆第一张图片
-    $(".imgdiv .imageul").append(clone);//复制到列表最后
+    var clone = $(".imgdiv .imageul li").first().clone();//Clone the first picture
+    $(".imgdiv .imageul").append(clone);//Clone to the end of the list
     var size = $(".imgdiv .imageul li").size();
-    console.log(size);//计算li的数量
 
-    /*移动事件*/
+    /*move event*/
     function move() {
         if (i == size) {
             $(".imgdiv .imageul").css({ left: 0 });
@@ -48,22 +47,22 @@ $(document).ready(function () {
 
     var t = setInterval(function () { i++; move();},2000);
 
-    /*自动轮播*/
-    /*鼠标悬停事件*/
+    /*Automatic rotation*/
+    /*Mouseover event*/
     $(".imgdiv").hover(function () {
-        clearInterval(t);//鼠标悬停时清除定时器
+        clearInterval(t);//Clear the clock when mouse hover
     }, function () {
-        t = setInterval(function () { i++; move(); }, 2000); //鼠标移出时重置定时器
+        t = setInterval(function () { i++; move(); }, 2000); //reset the clock
     });
 
-    /*向左按钮*/
+    /*left button*/
     $(".imgdiv .btn_l").click(function () {
         i++;
         move();
     })
 
 
-    /*向右按钮*/
+    /*right button*/
     $(".imgdiv .btn_r").click(function () {
         i--;
         move();
