@@ -4,7 +4,7 @@ window.onload = function () {
     var it = document.getElementById("main");
     window.onscroll = function () {
         var t = document.documentElement.scrollTop || document.body.scrollTop;
-        if (t > 450) {
+        if (t > 500) {
             mydiv.style.position = "fixed";                    
             mydiv.style.top = "90px";
             mydiv.style.width = "100%";
@@ -37,10 +37,10 @@ $(document).ready(function () {
             i = 1;
         }
         if (i == -1) {
-            $(".imgdiv .imageul").css({ left: -(size - 1) * 700 });
+            $(".imgdiv .imageul").css({ left: -(size - 1) * 800 });
             i = size - 2;
         }
-        $(".imgdiv .imageul").stop().animate({ left: -i * 700 }, 700);
+        $(".imgdiv .imageul").stop().animate({ left: -i * 800 }, 800);
 
     }
 
