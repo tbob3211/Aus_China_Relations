@@ -1,3 +1,4 @@
+// Needs comments
 // var it = 0;
 window.onload = function () {
     var mydiv = document.getElementById("topnav");
@@ -20,7 +21,7 @@ window.onload = function () {
 
 
 
-
+// Needs comments
 
 $(document).ready(function () {
  
