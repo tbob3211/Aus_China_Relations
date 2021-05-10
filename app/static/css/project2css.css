@@ -1,0 +1,293 @@
+/* Need comments */
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
+
+body{
+    font-family: 'Dancing Script', cursive;
+}
+
+#topdiv .titlediv{
+    width: 60%;
+    padding: 0%;
+    display: inline;
+    float:left;
+}
+
+.titlediv{
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.titlediv h1{
+    margin-top: 0%;
+}
+
+.Layout,#first{
+    list-style-type: none;
+    font-family: fantasy;
+    padding: 0%;
+}
+
+#first{
+    margin: 30px;
+    display: inline;
+    float:right;
+}
+
+#first li{
+    display: inline;
+    margin-left: 20px;
+}
+
+#main{
+    padding-left: 10%;
+    padding-right: 10%;
+    margin-top: 0%;
+}
+
+#topdiv{
+    margin-top: -90px;
+    background-color: white;
+    color: rgb(138, 67, 0);
+    width: 100%;
+    height: 90px;
+    position: fixed; 
+    display: inline;
+    border-bottom: 1px solid rgb(216, 141, 3);
+    z-index: 2;
+}
+
+#topnav{
+    height: 60px;
+    background-color: rgb(167, 40, 40);
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 20px;
+    z-index: 2;
+}
+
+.anchor{
+    position: relative;
+    top: -150px;
+}
+
+.dorp{
+    position: relative;   
+    display: inline-block; 
+    margin-right: 6px;
+    margin-left: 4px;
+    padding-bottom: 19px;
+    padding-top: 15px;
+    text-align: center;
+}
+
+.dorp1{
+    transition: color 2s;
+}
+
+.Layout{
+    text-decoration: wavy;
+    font-family: fantasy;
+    text-overflow: inherit;
+    margin-top: 0px;
+}
+
+#main p{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+}
+
+#main h2{
+    font-size: 32px;
+}
+
+#main h4{
+    font-size:25px;
+}
+
+.wcf img{
+    width: 240px;
+    float: right;
+}
+
+.dorp1:hover{
+    color: rgb(223, 255, 79);
+}
+
+.dorp a{
+    color: white;
+}
+
+.imgdiv { 
+    width:800px; 
+    height:500px;
+    margin: 0 auto; 
+    margin-top: 90px; 
+    position:relative; 
+    overflow:hidden;
+}
+
+.imgdiv .imageul{
+    width:5000px; 
+    position:absolute; 
+    left:0px;top:0px;
+}
+
+.imgdiv .imageul img{
+    width:800px; 
+    height:500px;
+}
+
+.imgdiv .imageul li{
+    float: left;
+}
+
+.imgdiv .btn {
+    width: 50px;
+    height: 90px;
+    background-color: #808080;
+    opacity: 0.5; 
+    position:absolute;
+    top:50%; 
+    margin-top:-25px;
+    cursor:pointer;
+    text-align:center;
+    line-height:70px;
+    font-size:40px;
+    color:#fff;
+    font-family:cursive;
+    display:none;
+}
+
+.imgdiv .btn_l { 
+    left:0px;
+}
+
+.imgdiv .btn_r { 
+    right:0px;
+}
+
+.imgdiv:hover .btn { 
+    display:block;
+}
+
+.btn:hover{
+    background-color: black;
+}
+
+.content{
+    width: 100%;
+    height: 500px;
+    margin: 10px 0;
+    position: relative;
+}
+
+.content h2{
+    width: 100%;
+    height: 30px;
+    top: 0%;
+}
+
+.content1{
+    width: 45%;
+    position: absolute;
+    top: 40px;
+    left: 0%;
+}
+
+.content2{
+    width: 45%;
+    position: absolute;
+    top: 40px;
+    left: 50%;
+}
+
+.content3{
+    width: 45%;
+    position: absolute;
+    top: 540px;
+    left: 0%;
+}
+
+.content4{
+    width: 45%;
+    position: absolute;
+    top: 540px;
+    left: 50%;
+}
+
+.content5{
+    width: 45%;
+    position: absolute;
+    top: 1040px;
+    left: 0%;
+}
+
+.content6{
+    width: 45%;
+    position: absolute;
+    top: 1040px;
+    left: 50%;
+}
+
+.jumbotron{
+    font-family: 'Dancing Script', cursive;
+    height: 50%;
+    text-align-last: center;
+    text-shadow: 2px 2px 2px #000;
+}
+
+#Pizzaheading{
+    background-image: url('https://i2.wp.com/nationalfoods.org/wp-content/uploads/2018/11/National-Dish-of-Italy-Pizza.jpg');
+    background-size:contain;
+    color:white;
+}
+
+#Soupheading{
+    background-image: url('https://previews.123rf.com/images/nesavinov/nesavinov1711/nesavinov171100125/90920724-italian-minestrone-soup-on-white-wooden-background-selective-focus-.jpg');
+    background-size:contain;
+    color:white;
+}
+
+#Tiramisuheading{
+    background-image: url('https://i2.chuimg.com/f4c375b79bd64376b0ba4e2eb8a3a58e_1280w_1024h.jpg?imageView2/2/w/660/interlace/1/q/90');
+    background-size:contain;
+    color:white;
+}
+
+.main h2{
+    margin: 10 auto;
+    width: 100%;
+    color: black;
+    text-align: "center";
+    padding: 6px;
+    margin-bottom:20px;
+}
+
+.main h3{
+    margin: 5 auto;
+}
+
+.main p{
+    margin: 0 auto;
+    width: 100%;
+    color: black;
+    text-align: "center";
+    padding: 6px;
+    font-size:larger;
+}
+
+.table{
+    margin: 0 auto;
+}
+
+.table th{
+    border-bottom: 2px solid;
+    color: darkgreen;
+    text-align: center;
+}
+
+.table td{
+    border-bottom: 1px solid;
+}
