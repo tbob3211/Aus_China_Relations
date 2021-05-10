@@ -6,10 +6,22 @@ body {
     font-family: 'Dancing Script', cursive;
 }
 
+.jumbotron-login{
+    font-family: 'Dancing Script', cursive;
+    font-size: 64px;
+    background-image: url('https://www.countryflags.com/wp-content/uploads/italy-flag-png-xl.png');
+    background-size:contain;
+    height: 50%;
+    text-align-last: center;
+    color:black;
+    text-shadow: 2px 2px 2px #000;
+    padding: 3%; 
+}
+/* https://www.jessicagavin.com/wp-content/uploads/2020/07/how-to-cook-pasta-3-1200.jpg */
 .jumbotron-pasta{
     font-family: 'Dancing Script', cursive;
     font-size: 64px;
-    background-image: url('https://www.jessicagavin.com/wp-content/uploads/2020/07/how-to-cook-pasta-3-1200.jpg');
+    background-image: url('https://www.countryflags.com/wp-content/uploads/italy-flag-png-xl.png');
     background-size:contain;
     height: 50%;
     text-align-last: center;
@@ -55,3 +67,4 @@ p{
     padding: 6px;
     font-size:larger;
 }
+

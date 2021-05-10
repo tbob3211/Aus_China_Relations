@@ -1,25 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Project 2 Theme page</title>
+        <title>Italian Cooking Tutorial</title>
         <meta name="title" content="CITS5505 Project 2: Cooking Italian food" charset="UTF-8">
+
+        <!-- Links  -->
+
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/e.4.0/css/bootstrap.min.css">
+
+        <!-- CSS Scripts -->
+
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.0.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-        <link type="text/css" rel="stylesheet" href="project2css.css">
-        <script type="text/javascript" src="project2js.js"></script>
-        <style>
-            *{ padding:0px; margin:0px;list-style:none;}
-        </style>
+        <link type="text/css" rel="stylesheet" href="{{url_for('static', filename='css/project2css.css') }}"> 
+        <script type="text/javascript" src="{{url_for('static', filename='js/project2js.js') }}"></script>
+        <style> *{ padding:0px; margin:0px;list-style:none;} </style>
     </head>
+
     <body>
         <div id="topdiv">
             <div class="titlediv">
-                <h1>Project: Cooking Italian Foods</h1>
-                <h4>Author: Chenze Mu (23148505) && Tom Nicholls (22629772)</h4>
+                <h1> Italian Cooking Tutorial</h1>
+                <h4> Authors: Chenze Mu (23148505) && Tom Nicholls (22629772)</h4>
             </div>
             <ul id="first">
                 <li>
@@ -29,13 +34,13 @@
                     </a>
                 </li>
                 <li>
-                    <a id="Contect">
+                    <a>
                         <span class="glyphicon glyphicon-earphone"></span>
                         Contact Author
                     </a>
                 </li>
                 <li>
-                    <a id="Login">
+                    <a id="Login" href='/login'>
                         <span class="glyphicon glyphicon-user"></span>
                         Register/Login
                     </a>
@@ -45,11 +50,11 @@
         </div>
         <div class="imgdiv">
             <ul class="imageul">
-                <li><img src="image/pizza1.jpeg" alt="Pizzaphoto1" /></li>
-                <li><img src="image/pizza2.jfif" alt="Pizzaphoto2" /></li>
-                <li><img src="image/Pasta1.jpg" alt="Pastaphoto1" /></li>
-                <li><img src="image/Tiramisu.jpg" alt="Tiramisuphoto1" /></li>
-                <li><img src="image/Risotto.jpg" alt="Risottophoto1" /></li>
+                <li><img src="{{url_for('static', filename= 'pizza1.jpeg') }}" alt="Pizzaphoto1" /></li>
+                <li><img src="{{url_for('static', filename= 'pizza2.jfif') }}" alt="Pizzaphoto2" /></li>
+                <li><img src="{{url_for('static', filename= 'Pasta1.jpg') }}" alt="Pastaphoto1" /></li>
+                <li><img src="{{url_for('static', filename= 'Tiramisu.jpg') }}" alt="Tiramisuphoto1" /></li>
+                <li><img src="{{url_for('static', filename= 'Risotto.jpg') }}" alt="Risottophoto1" /></li>
             </ul>
             <div class="btn btn_r">&lt;</div>
             <div class="btn btn_l">&gt;</div>
@@ -76,8 +81,8 @@
                     <p>
                         Food needs to be processed if it is to meet human nutritional needs or practical needs for storage and transportation. <b>Cooking</b> is the main way of food processing. In the modern age when nutritional needs are gradually being met, cooking begins to pursue color, fragrance and taste.
                     </p>
-                    <img src="image/Cooking.jpg" alt="Cooking picture" style="float: right;" />
-                    <p>
+                    <img src="{{url_for('static', filename= 'Cooking.jpg') }}" alt="Cooking picture" style="float: right;" />
+                    <p> 
                         The expansion of agriculture, commerce, trade and transportation between different regions and civilizations provided chefs with many new inventions and techniques, which in turn gave rise to different cuisines. For example French cuisine, Italian cuisine and Chinese cuisine. More and more convenient conditions and a variety of food materials have also attracted many people to love and try cooking.
                     </p>
                     <p>
@@ -177,7 +182,7 @@
                     </b></h2>
                     <div>
                         <p>
-
+                        Click <a href='/welcome'> this</a> To direct yourself to hello world
                         </p>
                     </div>
                 </div>
