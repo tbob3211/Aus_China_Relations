@@ -224,7 +224,7 @@ $(document).ready(function () {
             score = Math.round(trueCount / questionLength * 100);
 
             // Give the result page
-            resultSet = '<h2>' + judgeSkills(score) + '<br/> Your score is:  ' + score + '</h2><a href="index.html">' + feedbackButton + '</a></br>' + resultSet;
+            resultSet = '<h2>' + judgeSkills(score) + '<br/> Your score is:  ' + score + '</h2><a href="Feedback.html">' + feedbackButton + '</a></br>' + resultSet;
             superContainer.find('.result-keeper').html(resultSet).show(500);
             superContainer.find('.resultsview-qhover').hide();
             superContainer.find('.result-row').hover(function() {
