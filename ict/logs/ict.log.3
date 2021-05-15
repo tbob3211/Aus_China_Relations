@@ -1,0 +1,109 @@
+2021-05-14 12:59:57,096 INFO: Ict startup [in C:\Users\tbob3\cits5505\group_project\Italian_Cooking_Tutorial\ict\app\__init__.py:42]
+2021-05-14 13:00:26,307 ERROR: Exception on /edit_profile [POST] [in c:\users\tbob3\cits5505\group_project\italian_cooking_tutorial\ict\venv\lib\site-packages\flask\app.py:1440]
+Traceback (most recent call last):
+  File "c:\users\tbob3\cits5505\group_project\italian_cooking_tutorial\ict\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1770, in _execute_context
+    self.dialect.do_execute(
+  File "c:\users\tbob3\cits5505\group_project\italian_cooking_tutorial\ict\venv\lib\site-packages\sqlalchemy\engine\default.py", line 717, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.IntegrityError: UNIQUE constraint failed: user.username
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\users\tbob3\cits5505\group_project\italian_cooking_tutorial\ict\venv\lib\site-packages\flask\app.py", line 2051, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\tbob3\cits5505\group_project\italian_cooking_tutorial\ict\venv\lib\site-packages\flask\app.py", line 1501, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\tbob3\cits5505\group_project\italian_cooking_tutorial\ict\venv\lib\site-packages\flask\app.py", line 1499, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\tbob3\cits5505\group_project\italian_cooking_tutorial\ict\venv\lib\site-packages\flask\app.py", line 1485, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "c:\users\tbob3\cits5505\group_project\italian_cooking_tutorial\ict\venv\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\tbob3\cits5505\group_project\Italian_Cooking_Tutorial\ict\app\routes.py", line 88, in edit_profile
+    db.session.commit()
+  File "<string>", line 2, in commit
+  File "c:\users\tbob3\cits5505\group_project\italian_cooking_tutorial\ict\venv\lib\site-packages\sqlalchemy\orm\session.py", line 1428, in commit
+    self._transaction.commit(_to_root=self.future)
+  File "c:\users\tbob3\cits5505\group_project\italian_cooking_tutorial\ict\venv\lib\site-packages\sqlalchemy\orm\session.py", line 829, in commit
+    self._prepare_impl()
+  File "c:\users\tbob3\cits5505\group_project\italian_cooking_tutorial\ict\venv\lib\site-packages\sqlalchemy\orm\session.py", line 808, in _prepare_impl
+    self.session.flush()
+  File "c:\users\tbob3\cits5505\group_project\italian_cooking_tutorial\ict\venv\lib\site-packages\sqlalchemy\orm\session.py", line 3262, in flush
+    self._flush(objects)
+  File "c:\users\tbob3\cits5505\group_project\italian_cooking_tutorial\ict\venv\lib\site-packages\sqlalchemy\orm\session.py", line 3402, in _flush
+    transaction.rollback(_capture_exception=True)
+  File "c:\users\tbob3\cits5505\group_project\italian_cooking_tutorial\ict\venv\lib\site-packages\sqlalchemy\util\langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "c:\users\tbob3\cits5505\group_project\italian_cooking_tutorial\ict\venv\lib\site-packages\sqlalchemy\util\compat.py", line 211, in raise_
+    raise exception
+  File "c:\users\tbob3\cits5505\group_project\italian_cooking_tutorial\ict\venv\lib\site-packages\sqlalchemy\orm\session.py", line 3362, in _flush
+    flush_context.execute()
+  File "c:\users\tbob3\cits5505\group_project\italian_cooking_tutorial\ict\venv\lib\site-packages\sqlalchemy\orm\unitofwork.py", line 455, in execute
+    rec.execute(self)
+  File "c:\users\tbob3\cits5505\group_project\italian_cooking_tutorial\ict\venv\lib\site-packages\sqlalchemy\orm\unitofwork.py", line 629, in execute
+    util.preloaded.orm_persistence.save_obj(
+  File "c:\users\tbob3\cits5505\group_project\italian_cooking_tutorial\ict\venv\lib\site-packages\sqlalchemy\orm\persistence.py", line 234, in save_obj
+    _emit_update_statements(
+  File "c:\users\tbob3\cits5505\group_project\italian_cooking_tutorial\ict\venv\lib\site-packages\sqlalchemy\orm\persistence.py", line 998, in _emit_update_statements
+    c = connection._execute_20(
+  File "c:\users\tbob3\cits5505\group_project\italian_cooking_tutorial\ict\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1582, in _execute_20
+    return meth(self, args_10style, kwargs_10style, execution_options)
+  File "c:\users\tbob3\cits5505\group_project\italian_cooking_tutorial\ict\venv\lib\site-packages\sqlalchemy\sql\elements.py", line 329, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "c:\users\tbob3\cits5505\group_project\italian_cooking_tutorial\ict\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1451, in _execute_clauseelement
+    ret = self._execute_context(
+  File "c:\users\tbob3\cits5505\group_project\italian_cooking_tutorial\ict\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1813, in _execute_context
+    self._handle_dbapi_exception(
+  File "c:\users\tbob3\cits5505\group_project\italian_cooking_tutorial\ict\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1994, in _handle_dbapi_exception
+    util.raise_(
+  File "c:\users\tbob3\cits5505\group_project\italian_cooking_tutorial\ict\venv\lib\site-packages\sqlalchemy\util\compat.py", line 211, in raise_
+    raise exception
+  File "c:\users\tbob3\cits5505\group_project\italian_cooking_tutorial\ict\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1770, in _execute_context
+    self.dialect.do_execute(
+  File "c:\users\tbob3\cits5505\group_project\italian_cooking_tutorial\ict\venv\lib\site-packages\sqlalchemy\engine\default.py", line 717, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.IntegrityError: (sqlite3.IntegrityError) UNIQUE constraint failed: user.username
+[SQL: UPDATE user SET username=?, about_me=? WHERE user.id = ?]
+[parameters: ('tbob3211', '', 2)]
+(Background on this error at: http://sqlalche.me/e/14/gkpj)
+2021-05-14 13:09:14,022 INFO: Ict startup [in C:\Users\tbob3\cits5505\group_project\Italian_Cooking_Tutorial\ict\app\__init__.py:42]
+2021-05-14 15:27:50,518 INFO: Ict startup [in C:\Users\tbob3\cits5505\group_project\Italian_Cooking_Tutorial\ict\app\__init__.py:42]
+2021-05-14 15:30:24,764 INFO: Ict startup [in C:\Users\tbob3\cits5505\group_project\Italian_Cooking_Tutorial\ict\app\__init__.py:42]
+2021-05-14 15:50:00,304 INFO: Ict startup [in C:\Users\tbob3\cits5505\group_project\Italian_Cooking_Tutorial\ict\app\__init__.py:42]
+2021-05-14 15:51:34,200 INFO: Ict startup [in C:\Users\tbob3\cits5505\group_project\Italian_Cooking_Tutorial\ict\app\__init__.py:42]
+2021-05-14 15:51:37,033 ERROR: Exception on / [GET] [in c:\users\tbob3\cits5505\group_project\italian_cooking_tutorial\ict\venv\lib\site-packages\flask\app.py:1440]
+Traceback (most recent call last):
+  File "c:\users\tbob3\cits5505\group_project\italian_cooking_tutorial\ict\venv\lib\site-packages\flask\app.py", line 2051, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\tbob3\cits5505\group_project\italian_cooking_tutorial\ict\venv\lib\site-packages\flask\app.py", line 1501, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\tbob3\cits5505\group_project\italian_cooking_tutorial\ict\venv\lib\site-packages\flask\app.py", line 1499, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\tbob3\cits5505\group_project\italian_cooking_tutorial\ict\venv\lib\site-packages\flask\app.py", line 1485, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "c:\users\tbob3\cits5505\group_project\italian_cooking_tutorial\ict\venv\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\tbob3\cits5505\group_project\Italian_Cooking_Tutorial\ict\app\routes.py", line 25, in index
+    return render_template('index.html', title='Home Page', posts=posts)
+  File "c:\users\tbob3\cits5505\group_project\italian_cooking_tutorial\ict\venv\lib\site-packages\flask\templating.py", line 147, in render_template
+    return _render(
+  File "c:\users\tbob3\cits5505\group_project\italian_cooking_tutorial\ict\venv\lib\site-packages\flask\templating.py", line 128, in _render
+    rv = template.render(context)
+  File "c:\users\tbob3\cits5505\group_project\italian_cooking_tutorial\ict\venv\lib\site-packages\jinja2\environment.py", line 1289, in render
+    self.environment.handle_exception()
+  File "c:\users\tbob3\cits5505\group_project\italian_cooking_tutorial\ict\venv\lib\site-packages\jinja2\environment.py", line 924, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\tbob3\cits5505\group_project\Italian_Cooking_Tutorial\ict\app\templates\index.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "C:\Users\tbob3\cits5505\group_project\Italian_Cooking_Tutorial\ict\app\templates\base.html", line 30, in top-level template code
+    {% block content %}{% endblock %}
+  File "C:\Users\tbob3\cits5505\group_project\Italian_Cooking_Tutorial\ict\app\templates\index.html", line 7, in block 'content'
+    <a href="{{ url_for('loginnn') }}">loginnn</a>
+  File "c:\users\tbob3\cits5505\group_project\italian_cooking_tutorial\ict\venv\lib\site-packages\flask\helpers.py", line 334, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "c:\users\tbob3\cits5505\group_project\italian_cooking_tutorial\ict\venv\lib\site-packages\flask\helpers.py", line 321, in url_for
+    rv = url_adapter.build(
+  File "c:\users\tbob3\cits5505\group_project\italian_cooking_tutorial\ict\venv\lib\site-packages\werkzeug\routing.py", line 2301, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.BuildError: Could not build url for endpoint 'loginnn'. Did you mean 'login' instead?
