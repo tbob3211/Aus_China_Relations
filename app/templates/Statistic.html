@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Employing bootstrapping -->
+
+        <title> statistical information </title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <link type="text/css" rel="stylesheet" href="css/project2css.css">
+        <script type="text/javascript" src="js/project2js.js"></script>
+        <script>
+            function giveStat(){
+                // Send score to the statistic page
+            
+                document.getElementById('STATINFO').innerHTML='<h1>There are total ' + '' + ' Users registered in this site.</br> and ' + '' + ' people attend this test.</h1>';
+                // First ''= SELECT COUNT(*) FROM USERS
+                // Second ''= SELECT COUNT(*) FROM GRADES
+        }
+        </script>
+    </head>
+    <body>
+
+        <div id="topdiv">
+            <div class="titlediv">
+                <h1> Italian Cooking Tutorial</h1>
+                <h4> Authors: Chenze Mu (23148505) && Tom Nicholls (22629772)</h4>
+            </div>
+            <ul id="first">
+                <li>
+                    <a id="Search">
+                        <span class="glyphicon glyphicon-search"></span>
+                        <input type="search" value placeholder="search">
+                    </a>
+                </li>
+                <li>
+                    <a>
+                        <span class="glyphicon glyphicon-earphone"></span>
+                        Contact Author
+                    </a>
+                </li>
+                <li>
+                    <a id="Login" href='/login'>
+                        <span class="glyphicon glyphicon-user"></span>
+                        Register/Login
+                    </a>
+                </li>
+            </ul>
+            
+        </div>
+        <div class="Bar_chart">
+            <canvas  id="a_canvas" width="500" height="300"></canvas>
+            <p>Bar Chart for the data</p>
+        </div>
+        <div id="STATINFO"></div>
+    </body>
+</html>
