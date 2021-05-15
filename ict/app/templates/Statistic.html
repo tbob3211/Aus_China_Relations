@@ -9,15 +9,6 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <link type="text/css" rel="stylesheet" href="css/project2css.css">
         <script type="text/javascript" src="js/project2js.js"></script>
-        <script>
-            function giveStat(){
-                // Send score to the statistic page
-            
-                document.getElementById('STATINFO').innerHTML='<h1>There are total ' + '' + ' Users registered in this site.</br> and ' + '' + ' people attend this test.</h1>';
-                // First ''= SELECT COUNT(*) FROM USERS
-                // Second ''= SELECT COUNT(*) FROM GRADES
-        }
-        </script>
     </head>
     <body>
 
@@ -53,5 +44,12 @@
             <p>Bar Chart for the data</p>
         </div>
         <div id="STATINFO"></div>
+        <script>
+            // Send score to the statistic page
+        
+            document.getElementById('STATINFO').innerHTML='<h1>There are total ' + '' + ' Users registered in this site.</br> and ' + '' + ' people attend this test.</h1>';
+            // First ''= SELECT COUNT(*) FROM USERS
+            // Second ''= SELECT COUNT(*) FROM GRADES
+        </script>
     </body>
 </html>
