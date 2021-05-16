@@ -46,8 +46,13 @@
         <div id="STATINFO"></div>
         <script>
             // Send score to the statistic page
-        
-            document.getElementById('STATINFO').innerHTML='<h1>There are total ' + '' + ' Users registered in this site.</br> and ' + '' + ' people attend this test.</h1>';
+            $.getJSON('/Statistic', 
+                function(data) {                    // Data from flask
+                    var Usercount=data.Usercount;
+                    var Gradecount=data.Gradecount;
+                }
+            )   
+            document.getElementById('STATINFO').innerHTML='<h1>There are total ' + Usercount + ' Users registered in this site.</br> and ' + Gradecount + ' people attend this test.</h1>';
             // First ''= SELECT COUNT(*) FROM USERS
             // Second ''= SELECT COUNT(*) FROM GRADES
         </script>

@@ -45,3 +45,8 @@ werkzeug.routing.BuildError: Could not build url for endpoint 'loginnn'. Did you
 2021-05-14 17:38:08,448 INFO: Ict startup [in C:\Users\tbob3\cits5505\group_project\Italian_Cooking_Tutorial\ict\app\__init__.py:42]
 2021-05-14 23:37:58,934 INFO: Ict startup [in C:\Users\tbob3\cits5505\group_project\Italian_Cooking_Tutorial\ict\app\__init__.py:42]
 2021-05-15 18:37:06,803 INFO: Ict startup [in C:\Users\tbob3\cits5505\group_project\Italian_Cooking_Tutorial\ict\app\__init__.py:42]
+2021-05-16 14:48:56,457 INFO: Ict startup [in /home/xinyuaninori/AgileProject2/ict/app/__init__.py:42]
+2021-05-16 14:54:07,932 INFO: Ict startup [in /home/xinyuaninori/AgileProject2/ict/app/__init__.py:42]
+2021-05-17 01:44:15,308 INFO: Ict startup [in /home/xinyuaninori/AgileProject2/ict/app/__init__.py:42]
+2021-05-17 01:44:35,826 INFO: Ict startup [in /home/xinyuaninori/AgileProject2/ict/app/__init__.py:42]
+2021-05-17 01:44:59,893 INFO: Ict startup [in /home/xinyuaninori/AgileProject2/ict/app/__init__.py:42]

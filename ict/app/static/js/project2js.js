@@ -1,3 +1,21 @@
+// This is for the navigation bar which is always at the beginning as it scrolls to a certain position
+var mydiv = document.getElementById("topnav");
+var it = document.getElementById("main");
+window.onscroll = function () {
+    var t = document.documentElement.scrollTop || document.body.scrollTop;
+    if (t > 500) {
+        mydiv.style.position = "fixed";                    
+        mydiv.style.top = "90px";
+        mydiv.style.width = "100%";
+        it.style.marginTop = "80px";
+    }
+    else {
+        mydiv.style.position = "static";
+        it.style.marginTop = "0px";
+    }
+}
+
+
 // This is for the image rotation effect on the Theme page
 
 $(document).ready(function () {
@@ -54,8 +72,8 @@ $(document).ready(function () {
     $.fn.jquizzy = function(settings) {
         var defaults = {
             questions: null,
+            // QAnswers: null,
             endText: 'Finish!',
-            sendResultsURL: null,
             resultComments: {
                 perfect: 'Italian Genius!!!',
                 excellent: 'Excellent!',
@@ -67,14 +85,16 @@ $(document).ready(function () {
         };
         var config = $.extend(defaults, settings);
         var superContainer = $(this);
+        // var feedcontainer = $("#FeedbackQA");
         var answers = [];
+        //The first and final page appearence
         var intro = '	<div class="intro-container slide-container"><a class="nav-start" href="#">Are you ready?</br>Start</a></div>	';
         var exit = '<div class="results-container slide-container"><div class="question-number">' + config.endText + '</div><div class="result-keeper"></div></div><div class="notice">Please select one option！</div>';        
         var content = '';
         var questionsIteratorIndex = 0;
         var answersIteratorIndex = 0;
         superContainer.addClass('main-quiz-holder');
-        // Set the question subpages
+        // Set the question subpages appearence
         for (questionsIteratorIndex = 0; questionsIteratorIndex < config.questions.length; questionsIteratorIndex++) {
             content += '<div class="slide-container"><div class="question-number">' + (questionsIteratorIndex + 1) + '/' + config.questions.length + '</div><div class="question">' + config.questions[questionsIteratorIndex].question + '</div><ul class="answers">';
             for (answersIteratorIndex = 0; answersIteratorIndex < config.questions[questionsIteratorIndex].answers.length; answersIteratorIndex++) {
@@ -177,36 +197,42 @@ $(document).ready(function () {
             superContainer.find('li.selected').each(function(index) {
                 userAnswers.push($(this).parents('.answers').children('li').index($(this).parents('.answers').find('li.selected')) + 1);
             });
-            //Send result to the feeedback page
-            if (config.sendResultsURL !== null) {
-                var collate = [];
-                for (r = 0; r < userAnswers.length; r++) {
-                    collate.push('{"questionNumber":"' + parseInt(r + 1, 10) + '", "userAnswer":"' + userAnswers[r] + '"}');
-                }
-                $.ajax({
-                    type: 'POST',
-                    url: config.sendResultsURL,
-                    data: '{"answers": [' + collate.join(",") + ']}',
-                    // complete: function() {
-                    //     console.log("OH HAI");
-                    // }
-                });
+            //Send result to the DB
+            var collate = [];
+            for (r = 0; r < userAnswers.length; r++) {
+                collate.push('{"userAnswer":"' + userAnswers[r] + '"}');
             }
+            $.ajax({
+                type: 'POST',
+                url: '/Feedback',
+                data: '{"answers": [' + collate.join(",") + '],"score":' + score + '}',
+                success: function(data) {
+                    console.log(data);
+                }                
+            });
+
+            // Separate the true answer and wrong answer
             var results = checkAnswers();
             var resultSet = '';
+            // var feedSet = '';
             var trueCount = 0;
             var feedbackButton = 'Feedback page';
             var score;
-            // var url;
-            // if (config.shortURL === null) {
-            //     config.shortURL = window.location
-            // };
+
             for (var i = 0; i < results.length; i++) {
                 if (results[i] === true) {
+                    //Count for the true results
                     trueCount++;
-                    isCorrect = true;
                 }
+                // else{
+                //     console.log(config.QAnswers)
+                //     if (config.QAnswers != null){
+                //         //Give false results answers on feedback page
+                //         feedSet += '<div>The reason for answer of #'+(i + 1)+' is: '+config.QAnswers[i]+'</div>';
+                //     }
+                // }
                 resultSet += '<div class="result-row">' + (results[i] === true ? "<div class='correct'>#"+(i + 1)+"</div>": "<div class='wrong'>#"+(i + 1)+"</div>");
+                //make hover css appearence
                 resultSet += '<div class="resultsview-qhover">' + config.questions[i].question;
                 resultSet += "<ul>";
                 for (answersIteratorIndex = 0; answersIteratorIndex < config.questions[i].answers.length; answersIteratorIndex++) {
@@ -227,6 +253,7 @@ $(document).ready(function () {
             resultSet = '<h2>' + judgeSkills(score) + '<br/> Your score is:  ' + score + '</h2><a href="Feedback.html">' + feedbackButton + '</a></br>' + resultSet;
             superContainer.find('.result-keeper').html(resultSet).show(500);
             superContainer.find('.resultsview-qhover').hide();
+            feedcontainer.html(feedSet)
             superContainer.find('.result-row').hover(function() {
                 $(this).find('.resultsview-qhover').show();
             },
@@ -248,27 +275,17 @@ $(document).ready(function () {
  
     window.onload = function(){
 
-        // This is for the navigation bar which is always at the beginning as it scrolls to a certain position
-        var mydiv = document.getElementById("topnav");
-        var it = document.getElementById("main");
-        window.onscroll = function () {
-            var t = document.documentElement.scrollTop || document.body.scrollTop;
-            if (t > 500) {
-                mydiv.style.position = "fixed";                    
-                mydiv.style.top = "90px";
-                mydiv.style.width = "100%";
-                it.style.marginTop = "80px";
-            }
-            else {
-                mydiv.style.position = "static";
-                it.style.marginTop = "0px";
-            }
-        }
+        
 
 
         // Draw a bar chart
-        var data = [1000,1300,2000,3000,2000,2000,1000,1500,2000,5000,1000,1000];
-        var xinforma = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+        // Get data from DB
+        $.getJSON('/Statistic', 
+            function(data) {                    // Data from flask
+                var data=data.count;               // return data["a"] value
+            }
+        )
+        var xinforma = ['25','50','75','100'];
 
         // Get the content
         var a_canvas = document.getElementById('a_canvas');
