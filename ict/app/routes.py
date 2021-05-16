@@ -132,3 +132,27 @@ def Feedback():
     UP = db.session.execute('SELECT COUNT(*) FROM USERS')
     GP = db.session.execute('SELECT COUNT(*) FROM GRADES')
     return jsonify({'count':count, 'Usercount':UP, 'Gradcount':GP}),render_template('Statistic.html', title='Feedback')
+
+@app.route('/pizza')
+def pizza(): 
+     return render_template('Pizza.html')
+
+@app.route('/risotto')
+def risotto(): 
+     return render_template('Risotto.html')
+
+@app.route('/pasta')
+def pasta(): 
+     return render_template('sausage_pasta.html')
+
+@app.route('/minestrone_soup')
+def minestrone_soup(): 
+     return render_template('Minestrone_Soup.html')
+
+@app.route('/tiramisu')
+def tiramisu(): 
+     return render_template('Tiramisu.html')
+
+@app.route('/entree')
+def entree(): 
+     return render_template('arancini.html')
