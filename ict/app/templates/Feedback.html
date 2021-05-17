@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <!-- Employing bootstrapping -->
+
+    <title> Feedback </title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="../static/css/project2css.css">
+    <script type="text/javascript" src="../static/js/project2js.js"></script>
+  </head>
+  <body>
+        <div id="Feedback"></div>
+        <div id="FeedbackQA"></div>
+        
+        <script>
+            //Set the Answer
+            var QAnswers={'answers':[{'answer':'javascript query'},{'answer':'table and number'},{'answer':'number and zero'},{'answer':'number and units'}]};
+            var QAlist={'questions':[{'question':'jQuery？','answers':['JavaScript','CSS','PHP','neither'],'correctAnswer':1},{'question':'Different?','answers':['table1','table2','table','table3'],'correctAnswer':3},{'question':'Any 0?','answers':['1','2','30','4'],'correctAnswer':3},{'question':'Far?','answers':['5','5km','6','7'],'correctAnswer':2}]};
+
+            document.getElementById("Feedback").innerHTML='<h1>You surpassed <span>  {{ percentage }}  </span>% of the respondents!</h1>';
+
+            $.getJSON('/Feedback', 
+                function(data) {                    // Data from flask
+                    var useranswer=data.answers               // return data["a"] value
+                }
+            )
+
+            for (i = 0; i < useranswer.length; i++){
+                if(useranswer[i].useranswer != QAlist.questions[i].correctAnswer){
+                    document.getElementById("FeedbackQA").innerHTML+='<div> The reason for the correct answer to the question ' + (i + 1) + ' is: ' + QAnswers.answers[i].answer + ' </div>'
+                }
+            }
+        </script>
+  </body>
+</html>

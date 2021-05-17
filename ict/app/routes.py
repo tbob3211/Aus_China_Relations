@@ -1,8 +1,8 @@
-from flask import render_template, flash, redirect, url_for, request
+from flask import render_template, flash, redirect, url_for, request, jsonify
 from app import app, db
 from app.forms import LoginForm
 from flask_login import current_user, login_user, logout_user, login_required
-from app.models import User
+from app.models import User, Post
 from werkzeug.urls import url_parse
 from app.forms import RegistrationForm, EditProfileForm
 from datetime import datetime
@@ -98,6 +98,40 @@ def edit_profile():
         form.about_me.data = current_user.about_me
     return render_template('edit_profile.html', title='Edit Profile',
                            form=form)
+
+@app.route('/Assessment', methods=['GET', 'POST'])
+@login_required
+def Assessment():
+    return render_template('Assignment.html', title='Assignment')
+
+
+@app.route('/Feedback', methods=['GET', 'POST'])
+@login_required
+def Feedback():
+    post = Post(body=request.form['answers'], score=request.form['score'])
+    db.session.add(post)
+    db.session.commit()
+    count = db.session.execute('select count(*) from Grade where grade <=' + request.form['score'] + '')
+    total = db.session.execute('select * from Grade')
+    percentage = 100*count/total
+    return jsonify({'answers':request.form['answers']}),render_template('Feedback.html', title='Feedback', percentage=percentage, post=post)
+
+
+@app.route('/Statistic', methods=['GET', 'POST'])
+@login_required
+def Feedback():
+    count = {}
+    count1 = db.session.execute('select count(*) from Grade where grade <= 25')
+    count2 = db.session.execute('select count(*) from Grade where grade <= 50')
+    count3 = db.session.execute('select count(*) from Grade where grade <= 75')
+    count4 = db.session.execute('select count(*) from Grade where grade <= 100')
+    count["25"] = count1
+    count["50"] = count2
+    count["75"] = count3
+    count["100"] = count4
+    UP = db.session.execute('SELECT COUNT(*) FROM USERS')
+    GP = db.session.execute('SELECT COUNT(*) FROM GRADES')
+    return jsonify({'count':count, 'Usercount':UP, 'Gradcount':GP}),render_template('Statistic.html', title='Feedback')
 
 @app.route('/pizza')
 def pizza(): 
