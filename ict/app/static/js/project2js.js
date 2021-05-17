@@ -79,7 +79,7 @@ $(document).ready(function () {
                 excellent: 'Excellent!',
                 good: 'You have a basic understanding of Italian food!',
                 average: 'On average~ You can learn more.',
-                bad: 'Not good!You can do better！',
+                bad: 'Not good! You can do better！',
                 worst: 'Sorrowful!'
             }
         };

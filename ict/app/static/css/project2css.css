@@ -1,6 +1,7 @@
-/* Need comments */
+/* Download Fonts */
 
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=KoHo:wght@200&display=swap');
 
 body{
     font-family: 'Dancing Script', cursive;
@@ -93,7 +94,7 @@ body{
 }
 
 #main p{
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'KoHo', sans-serif;
     font-size: 20px;
 }
 
@@ -228,6 +229,13 @@ body{
     position: absolute;
     top: 1040px;
     left: 50%;
+}
+
+.content7{
+    width: 45%;
+    position: absolute;
+    top: 1530px;
+    left: 0%;
 }
 
 .jumbotron{
@@ -377,8 +385,6 @@ body{
     background:#77d125;
     box-shadow:0 1px 5px #3caa00,inset 0 10px 20px #c9ffb6;
 }
-
-
 
 .main-quiz-holder .result-keeper{
     margin:10px;

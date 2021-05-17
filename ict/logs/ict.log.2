@@ -1,4 +1,4 @@
-2021-05-17 14:31:19,487 ERROR: Exception on /Statistic [GET] [in c:\users\tbob3\cits5505\group_project\italian_cooking_tutorial\ict\venv\lib\site-packages\flask\app.py:1440]
+2021-05-17 18:51:52,910 ERROR: Exception on /Statistic [GET] [in c:\users\tbob3\cits5505\group_project\italian_cooking_tutorial\ict\venv\lib\site-packages\flask\app.py:1440]
 Traceback (most recent call last):
   File "c:\users\tbob3\cits5505\group_project\italian_cooking_tutorial\ict\venv\lib\site-packages\flask\app.py", line 2051, in wsgi_app
     response = self.full_dispatch_request()
@@ -10,7 +10,7 @@ Traceback (most recent call last):
     return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
   File "c:\users\tbob3\cits5505\group_project\italian_cooking_tutorial\ict\venv\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
     return func(*args, **kwargs)
-  File "C:\Users\tbob3\cits5505\group_project\Italian_Cooking_Tutorial\ict\app\routes.py", line 134, in Statistic
+  File "C:\Users\tbob3\cits5505\group_project\Italian_Cooking_Tutorial\ict\app\routes.py", line 126, in Statistic
     return jsonify({'count':count, 'Usercount':UP, 'Gradcount':GP}),render_template('Statistic.html', title='Feedback')
   File "c:\users\tbob3\cits5505\group_project\italian_cooking_tutorial\ict\venv\lib\site-packages\flask\json\__init__.py", line 348, in jsonify
     f"{dumps(data, indent=indent, separators=separators)}\n",
@@ -27,7 +27,8 @@ Traceback (most recent call last):
   File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.9.1520.0_x64__qbz5n2kfra8p0\lib\json\encoder.py", line 179, in default
     raise TypeError(f'Object of type {o.__class__.__name__} '
 TypeError: Object of type CursorResult is not JSON serializable
-2021-05-17 14:31:21,432 ERROR: Exception on /Statistic [GET] [in c:\users\tbob3\cits5505\group_project\italian_cooking_tutorial\ict\venv\lib\site-packages\flask\app.py:1440]
+2021-05-17 18:59:23,208 INFO: Ict startup [in C:\Users\tbob3\cits5505\group_project\Italian_Cooking_Tutorial\ict\app\__init__.py:42]
+2021-05-17 18:59:27,988 ERROR: Exception on /Statistic [GET] [in c:\users\tbob3\cits5505\group_project\italian_cooking_tutorial\ict\venv\lib\site-packages\flask\app.py:1440]
 Traceback (most recent call last):
   File "c:\users\tbob3\cits5505\group_project\italian_cooking_tutorial\ict\venv\lib\site-packages\flask\app.py", line 2051, in wsgi_app
     response = self.full_dispatch_request()
@@ -39,7 +40,7 @@ Traceback (most recent call last):
     return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
   File "c:\users\tbob3\cits5505\group_project\italian_cooking_tutorial\ict\venv\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
     return func(*args, **kwargs)
-  File "C:\Users\tbob3\cits5505\group_project\Italian_Cooking_Tutorial\ict\app\routes.py", line 134, in Statistic
+  File "C:\Users\tbob3\cits5505\group_project\Italian_Cooking_Tutorial\ict\app\routes.py", line 126, in Statistic
     return jsonify({'count':count, 'Usercount':UP, 'Gradcount':GP}),render_template('Statistic.html', title='Feedback')
   File "c:\users\tbob3\cits5505\group_project\italian_cooking_tutorial\ict\venv\lib\site-packages\flask\json\__init__.py", line 348, in jsonify
     f"{dumps(data, indent=indent, separators=separators)}\n",
@@ -56,8 +57,7 @@ Traceback (most recent call last):
   File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.9.1520.0_x64__qbz5n2kfra8p0\lib\json\encoder.py", line 179, in default
     raise TypeError(f'Object of type {o.__class__.__name__} '
 TypeError: Object of type CursorResult is not JSON serializable
-2021-05-17 14:32:30,842 INFO: Ict startup [in C:\Users\tbob3\cits5505\group_project\Italian_Cooking_Tutorial\ict\app\__init__.py:42]
-2021-05-17 14:32:33,695 ERROR: Exception on /Statistic [GET] [in c:\users\tbob3\cits5505\group_project\italian_cooking_tutorial\ict\venv\lib\site-packages\flask\app.py:1440]
+2021-05-17 18:59:30,499 ERROR: Exception on /Statistic [GET] [in c:\users\tbob3\cits5505\group_project\italian_cooking_tutorial\ict\venv\lib\site-packages\flask\app.py:1440]
 Traceback (most recent call last):
   File "c:\users\tbob3\cits5505\group_project\italian_cooking_tutorial\ict\venv\lib\site-packages\flask\app.py", line 2051, in wsgi_app
     response = self.full_dispatch_request()
@@ -69,7 +69,7 @@ Traceback (most recent call last):
     return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
   File "c:\users\tbob3\cits5505\group_project\italian_cooking_tutorial\ict\venv\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
     return func(*args, **kwargs)
-  File "C:\Users\tbob3\cits5505\group_project\Italian_Cooking_Tutorial\ict\app\routes.py", line 134, in Statistic
+  File "C:\Users\tbob3\cits5505\group_project\Italian_Cooking_Tutorial\ict\app\routes.py", line 126, in Statistic
     return jsonify({'count':count, 'Usercount':UP, 'Gradcount':GP}),render_template('Statistic.html', title='Feedback')
   File "c:\users\tbob3\cits5505\group_project\italian_cooking_tutorial\ict\venv\lib\site-packages\flask\json\__init__.py", line 348, in jsonify
     f"{dumps(data, indent=indent, separators=separators)}\n",
@@ -86,4 +86,4 @@ Traceback (most recent call last):
   File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.9.1520.0_x64__qbz5n2kfra8p0\lib\json\encoder.py", line 179, in default
     raise TypeError(f'Object of type {o.__class__.__name__} '
 TypeError: Object of type CursorResult is not JSON serializable
-2021-05-17 14:33:27,260 INFO: Ict startup [in C:\Users\tbob3\cits5505\group_project\Italian_Cooking_Tutorial\ict\app\__init__.py:42]
+2021-05-17 19:02:44,462 INFO: Ict startup [in C:\Users\tbob3\cits5505\group_project\Italian_Cooking_Tutorial\ict\app\__init__.py:42]

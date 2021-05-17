@@ -1,10 +1,8 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <h1>Hi, {{ current_user.username }}!</h1>
-    {% for post in posts %}
-    <div><p>{{ post.author.username }} says: <b>{{ post.body }}</b></p></div>
-    {% endfor %}
+    <h1 style='text-align: center;'><b>Welcome to your Italian Cooking Tutorial Interface</b></h1>
+    
 
     <!-- Bootstrap & CSS Scripts -->
 
@@ -123,11 +121,19 @@
                 <a name="Entrée" class="anchor"></a>
                 <h2><a href="{{ url_for('entree') }}"><b>
                     Entrée
-                </b></a></h2>
+                </b></a></h2> 
                 <div>
                     <img src='https://i.pinimg.com/originals/3f/04/a1/3f04a16d1907b4c0e2c19349505aac08.jpg' alt= "Arancini" style="width:240px;height:360px;">
                 </div>
             </div>
+            <div class="content7">
+                <h2><a href="{{ url_for('Assessment') }}"><b>
+                    Test
+                </b></a></h2>
+                <p style="font-family: KoHo", sans-serif;> Click test above to test your  Italian Cooking Tutorial skills & see if you have
+                    the knowledge to be a Italian cooking genius!!
+                </p>
+            </div> 
         </div>
     </div>
 {% endblock %}

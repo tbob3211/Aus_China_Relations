@@ -14,17 +14,7 @@ def tester():
 @app.route('/index')
 @login_required
 def index():
-    posts = [
-        {
-            'author': {'username': 'John'},
-            'body': 'Beautiful day in Portland!'
-        },
-        {
-            'author': {'username': 'Susan'},
-            'body': 'The Avengers movie was so cool!'
-        }
-    ]
-    return render_template('index.html', title='Home Page', posts=posts)
+    return render_template('index.html', title='Home Page')
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
@@ -105,16 +95,18 @@ def Assessment():
     return render_template('Assignment.html', title='Assignment')
 
 
-@app.route('/Feedback', methods=['GET', 'POST'])
-@login_required
-def Feedback():
-    post = Post(body=request.form['answers'], score=request.form['score'])
-    db.session.add(post)
-    db.session.commit()
-    count = db.session.execute('select count(*) from Post where score <=' + request.form['score'] + '')
-    total = db.session.execute('select * from Post')
-    percentage = 100*count/total
-    return jsonify({'answers':request.form['answers']}),render_template('Feedback.html', title='Feedback', percentage=percentage, post=post)
+# @app.route('/feedback')
+# def feedback():
+#     @login_required 
+#     #post = Post(body=request.form['answers'], score=request.form['score'])
+#     db.session.add(post)
+#     db.session.commit()
+#     count = db.session.execute('select count(*) from Post where score <=' + request.form['score'] + '')
+#     total = db.session.execute('select * from Post')
+#     percentage = 100*count/total
+#     return jsonify({'answers':request.form['answers']}),
+#     #return render_template('feedback.html')
+    
 
 
 @app.route('/Statistic', methods=['GET', 'POST'])
@@ -135,24 +127,24 @@ def Statistic():
 
 @app.route('/pizza')
 def pizza(): 
-     return render_template('Pizza.html')
+     return render_template('Pizza.html', title='Pizza')
 
 @app.route('/risotto')
 def risotto(): 
-     return render_template('Risotto.html')
+     return render_template('Risotto.html', title='Risotto')
 
 @app.route('/pasta')
 def pasta(): 
-     return render_template('sausage_pasta.html')
+     return render_template('sausage_pasta.html', title='Pasta')
 
 @app.route('/minestrone_soup')
 def minestrone_soup(): 
-     return render_template('Minestrone_Soup.html')
+     return render_template('Minestrone_Soup.html', title='Minestrone_soup')
 
 @app.route('/tiramisu')
 def tiramisu(): 
-     return render_template('Tiramisu.html')
+     return render_template('Tiramisu.html', title='Tiramisu')
 
 @app.route('/entree')
 def entree(): 
-     return render_template('arancini.html')
+     return render_template('arancini.html', title='Entree')

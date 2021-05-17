@@ -11,8 +11,15 @@
     <link type="text/css" rel="stylesheet" href="{{url_for('static', filename='css/project2css.css') }}">
     <script type="text/javascript" src="{{url_for('static', filename='js/project2js.js') }}"></script>
     <script type="text/javascript">
+
         //Set the question
-        var QAlist={'questions':[{'question':'jQuery？','answers':['JavaScript','CSS','PHP','neither'],'correctAnswer':1},{'question':'Different?','answers':['table1','table2','table','table3'],'correctAnswer':3},{'question':'Any 0?','answers':['1','2','30','4'],'correctAnswer':3},{'question':'Far?','answers':['5','5km','6','7'],'correctAnswer':2}]};
+        var QAlist=
+        {'questions':[{'question':'What region was Pizza first created?','answers':['Naples','Sardinia','Rome','Sicily'], 'correctAnswer':1},
+        {'question':'What other country claims to have discovered pasta first?','answers':['France','Japan','China','Greece'],'correctAnswer':3},
+        {'question':'Which liquor pairs the best with making tiramisu in our recipe?','answers':['Frangelico','Amaretto','Sambuca','Grappa'],'correctAnswer':3},
+        {'question':'What century did rice first start to be harvested properly in Italy for risotto?','answers':['14th','15th','18th','19th'],'correctAnswer':2}, 
+        {'question':'What does "cucina povera" translate to, which is a style of cooking that is used for minestrone soup','answers':['vegetarian method','rustic way','peasent style','poor kitchen'],'correctAnswer':4},
+        {'question':'What was the ingredient that shifted arancini from being a sweet to savoury cuisine?','answers':['rice','tomato','peas','sugar'],'correctAnswer':2}]};
         
         $(function(){
             $('#quiz-container').jquizzy({
