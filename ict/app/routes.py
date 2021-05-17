@@ -111,26 +111,26 @@ def Feedback():
     post = Post(body=request.form['answers'], score=request.form['score'])
     db.session.add(post)
     db.session.commit()
-    count = db.session.execute('select count(*) from Grade where grade <=' + request.form['score'] + '')
-    total = db.session.execute('select * from Grade')
+    count = db.session.execute('select count(*) from Post where score <=' + request.form['score'] + '')
+    total = db.session.execute('select * from Post')
     percentage = 100*count/total
     return jsonify({'answers':request.form['answers']}),render_template('Feedback.html', title='Feedback', percentage=percentage, post=post)
 
 
 @app.route('/Statistic', methods=['GET', 'POST'])
 @login_required
-def Feedback():
+def Statistic():
     count = {}
-    count1 = db.session.execute('select count(*) from Grade where grade <= 25')
-    count2 = db.session.execute('select count(*) from Grade where grade <= 50')
-    count3 = db.session.execute('select count(*) from Grade where grade <= 75')
-    count4 = db.session.execute('select count(*) from Grade where grade <= 100')
+    count1 = db.session.execute('select count(*) from Post where score <= 25')
+    count2 = db.session.execute('select count(*) from Post where score <= 50')
+    count3 = db.session.execute('select count(*) from Post where score <= 75')
+    count4 = db.session.execute('select count(*) from Post where score <= 100')
     count["25"] = count1
     count["50"] = count2
     count["75"] = count3
     count["100"] = count4
-    UP = db.session.execute('SELECT COUNT(*) FROM USERS')
-    GP = db.session.execute('SELECT COUNT(*) FROM GRADES')
+    UP = db.session.execute('SELECT COUNT(*) FROM USER')
+    GP = db.session.execute('SELECT COUNT(*) FROM POST')
     return jsonify({'count':count, 'Usercount':UP, 'Gradcount':GP}),render_template('Statistic.html', title='Feedback')
 
 @app.route('/pizza')

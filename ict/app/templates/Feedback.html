@@ -8,8 +8,8 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <link type="text/css" rel="stylesheet" href="../static/css/project2css.css">
-    <script type="text/javascript" src="../static/js/project2js.js"></script>
+    <link type="text/css" rel="stylesheet" href="{{url_for('static', filename='css/project2css.css') }}">
+    <script type="text/javascript" src="{{url_for('static', filename=js/project2js.js') }}"></script>
   </head>
   <body>
         <div id="Feedback"></div>
@@ -25,6 +25,7 @@
             $.getJSON('/Feedback', 
                 function(data) {                    // Data from flask
                     var useranswer=data.answers               // return data["a"] value
+                    console.log(useranswer)
                 }
             )
 

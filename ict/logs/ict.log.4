@@ -1,4 +1,75 @@
-2021-05-14 15:52:42,377 ERROR: Exception on /3 [GET] [in c:\users\tbob3\cits5505\group_project\italian_cooking_tutorial\ict\venv\lib\site-packages\flask\app.py:1440]
+2021-05-14 15:51:45,265 ERROR: Exception on /3 [GET] [in c:\users\tbob3\cits5505\group_project\italian_cooking_tutorial\ict\venv\lib\site-packages\flask\app.py:1440]
+Traceback (most recent call last):
+  File "c:\users\tbob3\cits5505\group_project\italian_cooking_tutorial\ict\venv\lib\site-packages\flask\app.py", line 2051, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\tbob3\cits5505\group_project\italian_cooking_tutorial\ict\venv\lib\site-packages\flask\app.py", line 1501, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\tbob3\cits5505\group_project\italian_cooking_tutorial\ict\venv\lib\site-packages\flask\app.py", line 1499, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\tbob3\cits5505\group_project\italian_cooking_tutorial\ict\venv\lib\site-packages\flask\app.py", line 1485, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "c:\users\tbob3\cits5505\group_project\italian_cooking_tutorial\ict\venv\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\tbob3\cits5505\group_project\Italian_Cooking_Tutorial\ict\app\routes.py", line 25, in index
+    return render_template('index.html', title='Home Page', posts=posts)
+  File "c:\users\tbob3\cits5505\group_project\italian_cooking_tutorial\ict\venv\lib\site-packages\flask\templating.py", line 147, in render_template
+    return _render(
+  File "c:\users\tbob3\cits5505\group_project\italian_cooking_tutorial\ict\venv\lib\site-packages\flask\templating.py", line 128, in _render
+    rv = template.render(context)
+  File "c:\users\tbob3\cits5505\group_project\italian_cooking_tutorial\ict\venv\lib\site-packages\jinja2\environment.py", line 1289, in render
+    self.environment.handle_exception()
+  File "c:\users\tbob3\cits5505\group_project\italian_cooking_tutorial\ict\venv\lib\site-packages\jinja2\environment.py", line 924, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\tbob3\cits5505\group_project\Italian_Cooking_Tutorial\ict\app\templates\index.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "C:\Users\tbob3\cits5505\group_project\Italian_Cooking_Tutorial\ict\app\templates\base.html", line 30, in top-level template code
+    {% block content %}{% endblock %}
+  File "C:\Users\tbob3\cits5505\group_project\Italian_Cooking_Tutorial\ict\app\templates\index.html", line 7, in block 'content'
+    <a href="{{ url_for('loginnn') }}">loginnn</a>
+  File "c:\users\tbob3\cits5505\group_project\italian_cooking_tutorial\ict\venv\lib\site-packages\flask\helpers.py", line 334, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "c:\users\tbob3\cits5505\group_project\italian_cooking_tutorial\ict\venv\lib\site-packages\flask\helpers.py", line 321, in url_for
+    rv = url_adapter.build(
+  File "c:\users\tbob3\cits5505\group_project\italian_cooking_tutorial\ict\venv\lib\site-packages\werkzeug\routing.py", line 2301, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.BuildError: Could not build url for endpoint 'loginnn'. Did you mean 'login' instead?
+2021-05-14 15:51:55,496 ERROR: Exception on /3 [GET] [in c:\users\tbob3\cits5505\group_project\italian_cooking_tutorial\ict\venv\lib\site-packages\flask\app.py:1440]
+Traceback (most recent call last):
+  File "c:\users\tbob3\cits5505\group_project\italian_cooking_tutorial\ict\venv\lib\site-packages\flask\app.py", line 2051, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\tbob3\cits5505\group_project\italian_cooking_tutorial\ict\venv\lib\site-packages\flask\app.py", line 1501, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\tbob3\cits5505\group_project\italian_cooking_tutorial\ict\venv\lib\site-packages\flask\app.py", line 1499, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\tbob3\cits5505\group_project\italian_cooking_tutorial\ict\venv\lib\site-packages\flask\app.py", line 1485, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "c:\users\tbob3\cits5505\group_project\italian_cooking_tutorial\ict\venv\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\tbob3\cits5505\group_project\Italian_Cooking_Tutorial\ict\app\routes.py", line 25, in index
+    return render_template('index.html', title='Home Page', posts=posts)
+  File "c:\users\tbob3\cits5505\group_project\italian_cooking_tutorial\ict\venv\lib\site-packages\flask\templating.py", line 147, in render_template
+    return _render(
+  File "c:\users\tbob3\cits5505\group_project\italian_cooking_tutorial\ict\venv\lib\site-packages\flask\templating.py", line 128, in _render
+    rv = template.render(context)
+  File "c:\users\tbob3\cits5505\group_project\italian_cooking_tutorial\ict\venv\lib\site-packages\jinja2\environment.py", line 1289, in render
+    self.environment.handle_exception()
+  File "c:\users\tbob3\cits5505\group_project\italian_cooking_tutorial\ict\venv\lib\site-packages\jinja2\environment.py", line 924, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\tbob3\cits5505\group_project\Italian_Cooking_Tutorial\ict\app\templates\index.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "C:\Users\tbob3\cits5505\group_project\Italian_Cooking_Tutorial\ict\app\templates\base.html", line 30, in top-level template code
+    {% block content %}{% endblock %}
+  File "C:\Users\tbob3\cits5505\group_project\Italian_Cooking_Tutorial\ict\app\templates\index.html", line 7, in block 'content'
+    <a href="{{ url_for('loginnn') }}">loginnn</a>
+  File "c:\users\tbob3\cits5505\group_project\italian_cooking_tutorial\ict\venv\lib\site-packages\flask\helpers.py", line 334, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "c:\users\tbob3\cits5505\group_project\italian_cooking_tutorial\ict\venv\lib\site-packages\flask\helpers.py", line 321, in url_for
+    rv = url_adapter.build(
+  File "c:\users\tbob3\cits5505\group_project\italian_cooking_tutorial\ict\venv\lib\site-packages\werkzeug\routing.py", line 2301, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.BuildError: Could not build url for endpoint 'loginnn'. Did you mean 'login' instead?
+2021-05-14 15:52:34,694 INFO: Ict startup [in C:\Users\tbob3\cits5505\group_project\Italian_Cooking_Tutorial\ict\app\__init__.py:42]
+2021-05-14 15:52:37,028 ERROR: Exception on / [GET] [in c:\users\tbob3\cits5505\group_project\italian_cooking_tutorial\ict\venv\lib\site-packages\flask\app.py:1440]
 Traceback (most recent call last):
   File "c:\users\tbob3\cits5505\group_project\italian_cooking_tutorial\ict\venv\lib\site-packages\flask\app.py", line 2051, in wsgi_app
     response = self.full_dispatch_request()
@@ -26,78 +97,6 @@ Traceback (most recent call last):
     {% block content %}{% endblock %}
   File "C:\Users\tbob3\cits5505\group_project\Italian_Cooking_Tutorial\ict\app\templates\index.html", line 7, in block 'content'
     <!--<a href="{{ url_for('loginnn') }}">loginnn</a> -->
-  File "c:\users\tbob3\cits5505\group_project\italian_cooking_tutorial\ict\venv\lib\site-packages\flask\helpers.py", line 334, in url_for
-    return appctx.app.handle_url_build_error(error, endpoint, values)
-  File "c:\users\tbob3\cits5505\group_project\italian_cooking_tutorial\ict\venv\lib\site-packages\flask\helpers.py", line 321, in url_for
-    rv = url_adapter.build(
-  File "c:\users\tbob3\cits5505\group_project\italian_cooking_tutorial\ict\venv\lib\site-packages\werkzeug\routing.py", line 2301, in build
-    raise BuildError(endpoint, values, method, self)
-werkzeug.routing.BuildError: Could not build url for endpoint 'loginnn'. Did you mean 'login' instead?
-2021-05-14 15:53:11,646 INFO: Ict startup [in C:\Users\tbob3\cits5505\group_project\Italian_Cooking_Tutorial\ict\app\__init__.py:42]
-2021-05-14 15:54:36,464 INFO: Ict startup [in C:\Users\tbob3\cits5505\group_project\Italian_Cooking_Tutorial\ict\app\__init__.py:42]
-2021-05-14 15:54:55,935 INFO: Ict startup [in C:\Users\tbob3\cits5505\group_project\Italian_Cooking_Tutorial\ict\app\__init__.py:42]
-2021-05-14 15:54:59,375 ERROR: Exception on / [GET] [in c:\users\tbob3\cits5505\group_project\italian_cooking_tutorial\ict\venv\lib\site-packages\flask\app.py:1440]
-Traceback (most recent call last):
-  File "c:\users\tbob3\cits5505\group_project\italian_cooking_tutorial\ict\venv\lib\site-packages\flask\app.py", line 2051, in wsgi_app
-    response = self.full_dispatch_request()
-  File "c:\users\tbob3\cits5505\group_project\italian_cooking_tutorial\ict\venv\lib\site-packages\flask\app.py", line 1501, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "c:\users\tbob3\cits5505\group_project\italian_cooking_tutorial\ict\venv\lib\site-packages\flask\app.py", line 1499, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "c:\users\tbob3\cits5505\group_project\italian_cooking_tutorial\ict\venv\lib\site-packages\flask\app.py", line 1485, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
-  File "c:\users\tbob3\cits5505\group_project\italian_cooking_tutorial\ict\venv\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
-    return func(*args, **kwargs)
-  File "C:\Users\tbob3\cits5505\group_project\Italian_Cooking_Tutorial\ict\app\routes.py", line 25, in index
-    return render_template('index.html', title='Home Page', posts=posts)
-  File "c:\users\tbob3\cits5505\group_project\italian_cooking_tutorial\ict\venv\lib\site-packages\flask\templating.py", line 147, in render_template
-    return _render(
-  File "c:\users\tbob3\cits5505\group_project\italian_cooking_tutorial\ict\venv\lib\site-packages\flask\templating.py", line 128, in _render
-    rv = template.render(context)
-  File "c:\users\tbob3\cits5505\group_project\italian_cooking_tutorial\ict\venv\lib\site-packages\jinja2\environment.py", line 1289, in render
-    self.environment.handle_exception()
-  File "c:\users\tbob3\cits5505\group_project\italian_cooking_tutorial\ict\venv\lib\site-packages\jinja2\environment.py", line 924, in handle_exception
-    raise rewrite_traceback_stack(source=source)
-  File "C:\Users\tbob3\cits5505\group_project\Italian_Cooking_Tutorial\ict\app\templates\index.html", line 1, in top-level template code
-    {% extends "base.html" %}
-  File "C:\Users\tbob3\cits5505\group_project\Italian_Cooking_Tutorial\ict\app\templates\base.html", line 30, in top-level template code
-    {% block content %}{% endblock %}
-  File "C:\Users\tbob3\cits5505\group_project\Italian_Cooking_Tutorial\ict\app\templates\index.html", line 8, in block 'content'
-    <a href="{{ url_for('loginnn') }}">Home</a>
-  File "c:\users\tbob3\cits5505\group_project\italian_cooking_tutorial\ict\venv\lib\site-packages\flask\helpers.py", line 334, in url_for
-    return appctx.app.handle_url_build_error(error, endpoint, values)
-  File "c:\users\tbob3\cits5505\group_project\italian_cooking_tutorial\ict\venv\lib\site-packages\flask\helpers.py", line 321, in url_for
-    rv = url_adapter.build(
-  File "c:\users\tbob3\cits5505\group_project\italian_cooking_tutorial\ict\venv\lib\site-packages\werkzeug\routing.py", line 2301, in build
-    raise BuildError(endpoint, values, method, self)
-werkzeug.routing.BuildError: Could not build url for endpoint 'loginnn'. Did you mean 'login' instead?
-2021-05-14 15:56:31,850 INFO: Ict startup [in C:\Users\tbob3\cits5505\group_project\Italian_Cooking_Tutorial\ict\app\__init__.py:42]
-2021-05-14 15:56:33,673 ERROR: Exception on / [GET] [in c:\users\tbob3\cits5505\group_project\italian_cooking_tutorial\ict\venv\lib\site-packages\flask\app.py:1440]
-Traceback (most recent call last):
-  File "c:\users\tbob3\cits5505\group_project\italian_cooking_tutorial\ict\venv\lib\site-packages\flask\app.py", line 2051, in wsgi_app
-    response = self.full_dispatch_request()
-  File "c:\users\tbob3\cits5505\group_project\italian_cooking_tutorial\ict\venv\lib\site-packages\flask\app.py", line 1501, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "c:\users\tbob3\cits5505\group_project\italian_cooking_tutorial\ict\venv\lib\site-packages\flask\app.py", line 1499, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "c:\users\tbob3\cits5505\group_project\italian_cooking_tutorial\ict\venv\lib\site-packages\flask\app.py", line 1485, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
-  File "c:\users\tbob3\cits5505\group_project\italian_cooking_tutorial\ict\venv\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
-    return func(*args, **kwargs)
-  File "C:\Users\tbob3\cits5505\group_project\Italian_Cooking_Tutorial\ict\app\routes.py", line 25, in index
-    return render_template('index.html', title='Home Page', posts=posts)
-  File "c:\users\tbob3\cits5505\group_project\italian_cooking_tutorial\ict\venv\lib\site-packages\flask\templating.py", line 147, in render_template
-    return _render(
-  File "c:\users\tbob3\cits5505\group_project\italian_cooking_tutorial\ict\venv\lib\site-packages\flask\templating.py", line 128, in _render
-    rv = template.render(context)
-  File "c:\users\tbob3\cits5505\group_project\italian_cooking_tutorial\ict\venv\lib\site-packages\jinja2\environment.py", line 1289, in render
-    self.environment.handle_exception()
-  File "c:\users\tbob3\cits5505\group_project\italian_cooking_tutorial\ict\venv\lib\site-packages\jinja2\environment.py", line 924, in handle_exception
-    raise rewrite_traceback_stack(source=source)
-  File "C:\Users\tbob3\cits5505\group_project\Italian_Cooking_Tutorial\ict\app\templates\index.html", line 1, in top-level template code
-    {% extends "base.html" %}
-  File "C:\Users\tbob3\cits5505\group_project\Italian_Cooking_Tutorial\ict\app\templates\base.html", line 12, in top-level template code
-    <a href="{{ url_for('loginnn') }}">Home2</a>
   File "c:\users\tbob3\cits5505\group_project\italian_cooking_tutorial\ict\venv\lib\site-packages\flask\helpers.py", line 334, in url_for
     return appctx.app.handle_url_build_error(error, endpoint, values)
   File "c:\users\tbob3\cits5505\group_project\italian_cooking_tutorial\ict\venv\lib\site-packages\flask\helpers.py", line 321, in url_for
