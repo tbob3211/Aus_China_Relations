@@ -1,4 +1,4 @@
-2021-05-17 19:04:15,533 ERROR: Exception on /Statistic [GET] [in c:\users\tbob3\cits5505\group_project\italian_cooking_tutorial\ict\venv\lib\site-packages\flask\app.py:1440]
+2021-05-17 19:33:42,019 ERROR: Exception on /Statistic [GET] [in c:\users\tbob3\cits5505\group_project\italian_cooking_tutorial\ict\venv\lib\site-packages\flask\app.py:1440]
 Traceback (most recent call last):
   File "c:\users\tbob3\cits5505\group_project\italian_cooking_tutorial\ict\venv\lib\site-packages\flask\app.py", line 2051, in wsgi_app
     response = self.full_dispatch_request()
