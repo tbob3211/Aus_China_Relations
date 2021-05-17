@@ -1,4 +1,4 @@
-2021-05-14 15:56:43,321 ERROR: Exception on /3 [GET] [in c:\users\tbob3\cits5505\group_project\italian_cooking_tutorial\ict\venv\lib\site-packages\flask\app.py:1440]
+2021-05-17 13:25:00,660 ERROR: Exception on /Statistic [GET] [in c:\users\tbob3\cits5505\group_project\italian_cooking_tutorial\ict\venv\lib\site-packages\flask\app.py:1440]
 Traceback (most recent call last):
   File "c:\users\tbob3\cits5505\group_project\italian_cooking_tutorial\ict\venv\lib\site-packages\flask\app.py", line 2051, in wsgi_app
     response = self.full_dispatch_request()
@@ -10,64 +10,81 @@ Traceback (most recent call last):
     return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
   File "c:\users\tbob3\cits5505\group_project\italian_cooking_tutorial\ict\venv\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
     return func(*args, **kwargs)
-  File "C:\Users\tbob3\cits5505\group_project\Italian_Cooking_Tutorial\ict\app\routes.py", line 25, in index
-    return render_template('index.html', title='Home Page', posts=posts)
-  File "c:\users\tbob3\cits5505\group_project\italian_cooking_tutorial\ict\venv\lib\site-packages\flask\templating.py", line 147, in render_template
-    return _render(
-  File "c:\users\tbob3\cits5505\group_project\italian_cooking_tutorial\ict\venv\lib\site-packages\flask\templating.py", line 128, in _render
-    rv = template.render(context)
-  File "c:\users\tbob3\cits5505\group_project\italian_cooking_tutorial\ict\venv\lib\site-packages\jinja2\environment.py", line 1289, in render
-    self.environment.handle_exception()
-  File "c:\users\tbob3\cits5505\group_project\italian_cooking_tutorial\ict\venv\lib\site-packages\jinja2\environment.py", line 924, in handle_exception
-    raise rewrite_traceback_stack(source=source)
-  File "C:\Users\tbob3\cits5505\group_project\Italian_Cooking_Tutorial\ict\app\templates\index.html", line 1, in top-level template code
-    {% extends "base.html" %}
-  File "C:\Users\tbob3\cits5505\group_project\Italian_Cooking_Tutorial\ict\app\templates\base.html", line 12, in top-level template code
-    <a href="{{ url_for('loginnn') }}">Home2</a>
-  File "c:\users\tbob3\cits5505\group_project\italian_cooking_tutorial\ict\venv\lib\site-packages\flask\helpers.py", line 334, in url_for
-    return appctx.app.handle_url_build_error(error, endpoint, values)
-  File "c:\users\tbob3\cits5505\group_project\italian_cooking_tutorial\ict\venv\lib\site-packages\flask\helpers.py", line 321, in url_for
-    rv = url_adapter.build(
-  File "c:\users\tbob3\cits5505\group_project\italian_cooking_tutorial\ict\venv\lib\site-packages\werkzeug\routing.py", line 2301, in build
-    raise BuildError(endpoint, values, method, self)
-werkzeug.routing.BuildError: Could not build url for endpoint 'loginnn'. Did you mean 'login' instead?
-2021-05-14 15:58:24,351 INFO: Ict startup [in C:\Users\tbob3\cits5505\group_project\Italian_Cooking_Tutorial\ict\app\__init__.py:42]
-2021-05-14 16:09:52,545 INFO: Ict startup [in C:\Users\tbob3\cits5505\group_project\Italian_Cooking_Tutorial\ict\app\__init__.py:42]
-2021-05-14 16:15:15,304 INFO: Ict startup [in C:\Users\tbob3\cits5505\group_project\Italian_Cooking_Tutorial\ict\app\__init__.py:42]
-2021-05-14 16:16:16,817 INFO: Ict startup [in C:\Users\tbob3\cits5505\group_project\Italian_Cooking_Tutorial\ict\app\__init__.py:42]
-2021-05-14 16:29:59,168 INFO: Ict startup [in C:\Users\tbob3\cits5505\group_project\Italian_Cooking_Tutorial\ict\app\__init__.py:42]
-2021-05-14 16:30:44,096 INFO: Ict startup [in C:\Users\tbob3\cits5505\group_project\Italian_Cooking_Tutorial\ict\app\__init__.py:42]
-2021-05-14 16:31:28,913 INFO: Ict startup [in C:\Users\tbob3\cits5505\group_project\Italian_Cooking_Tutorial\ict\app\__init__.py:42]
-2021-05-14 16:40:41,385 INFO: Ict startup [in C:\Users\tbob3\cits5505\group_project\Italian_Cooking_Tutorial\ict\app\__init__.py:42]
-2021-05-14 16:41:43,125 INFO: Ict startup [in C:\Users\tbob3\cits5505\group_project\Italian_Cooking_Tutorial\ict\app\__init__.py:42]
-2021-05-14 16:47:46,936 INFO: Ict startup [in C:\Users\tbob3\cits5505\group_project\Italian_Cooking_Tutorial\ict\app\__init__.py:42]
-2021-05-14 17:37:10,616 INFO: Ict startup [in C:\Users\tbob3\cits5505\group_project\Italian_Cooking_Tutorial\ict\app\__init__.py:42]
-2021-05-14 17:38:08,448 INFO: Ict startup [in C:\Users\tbob3\cits5505\group_project\Italian_Cooking_Tutorial\ict\app\__init__.py:42]
-2021-05-14 23:37:58,934 INFO: Ict startup [in C:\Users\tbob3\cits5505\group_project\Italian_Cooking_Tutorial\ict\app\__init__.py:42]
-2021-05-15 18:37:06,803 INFO: Ict startup [in C:\Users\tbob3\cits5505\group_project\Italian_Cooking_Tutorial\ict\app\__init__.py:42]
-<<<<<<< HEAD
-2021-05-16 14:48:56,457 INFO: Ict startup [in /home/xinyuaninori/AgileProject2/ict/app/__init__.py:42]
-2021-05-16 14:54:07,932 INFO: Ict startup [in /home/xinyuaninori/AgileProject2/ict/app/__init__.py:42]
-2021-05-17 01:44:15,308 INFO: Ict startup [in /home/xinyuaninori/AgileProject2/ict/app/__init__.py:42]
-2021-05-17 01:44:35,826 INFO: Ict startup [in /home/xinyuaninori/AgileProject2/ict/app/__init__.py:42]
-2021-05-17 01:44:59,893 INFO: Ict startup [in /home/xinyuaninori/AgileProject2/ict/app/__init__.py:42]
-=======
-2021-05-15 18:55:02,428 INFO: Ict startup [in C:\Users\tbob3\cits5505\group_project\Italian_Cooking_Tutorial\ict\app\__init__.py:42]
-2021-05-15 18:59:18,903 INFO: Ict startup [in C:\Users\tbob3\cits5505\group_project\Italian_Cooking_Tutorial\ict\app\__init__.py:42]
-2021-05-15 19:01:09,576 INFO: Ict startup [in C:\Users\tbob3\cits5505\group_project\Italian_Cooking_Tutorial\ict\app\__init__.py:42]
-2021-05-15 19:23:45,058 INFO: Ict startup [in C:\Users\tbob3\cits5505\group_project\Italian_Cooking_Tutorial\ict\app\__init__.py:42]
-2021-05-15 21:52:46,230 INFO: Ict startup [in C:\Users\tbob3\cits5505\group_project\Italian_Cooking_Tutorial\ict\app\__init__.py:42]
-2021-05-15 21:55:09,882 INFO: Ict startup [in C:\Users\tbob3\cits5505\group_project\Italian_Cooking_Tutorial\ict\app\__init__.py:42]
-2021-05-15 22:11:41,189 INFO: Ict startup [in C:\Users\tbob3\cits5505\group_project\Italian_Cooking_Tutorial\ict\app\__init__.py:42]
-2021-05-15 22:22:11,768 INFO: Ict startup [in C:\Users\tbob3\cits5505\group_project\Italian_Cooking_Tutorial\ict\app\__init__.py:42]
-2021-05-15 22:23:11,303 INFO: Ict startup [in C:\Users\tbob3\cits5505\group_project\Italian_Cooking_Tutorial\ict\app\__init__.py:42]
-2021-05-15 22:24:19,333 INFO: Ict startup [in C:\Users\tbob3\cits5505\group_project\Italian_Cooking_Tutorial\ict\app\__init__.py:42]
-2021-05-15 22:31:21,789 INFO: Ict startup [in C:\Users\tbob3\cits5505\group_project\Italian_Cooking_Tutorial\ict\app\__init__.py:42]
-2021-05-15 22:39:09,912 INFO: Ict startup [in C:\Users\tbob3\cits5505\group_project\Italian_Cooking_Tutorial\ict\app\__init__.py:42]
-2021-05-15 22:45:34,859 INFO: Ict startup [in C:\Users\tbob3\cits5505\group_project\Italian_Cooking_Tutorial\ict\app\__init__.py:42]
-2021-05-15 22:46:29,259 INFO: Ict startup [in C:\Users\tbob3\cits5505\group_project\Italian_Cooking_Tutorial\ict\app\__init__.py:42]
-2021-05-15 22:46:40,559 INFO: Ict startup [in C:\Users\tbob3\cits5505\group_project\Italian_Cooking_Tutorial\ict\app\__init__.py:42]
-2021-05-15 22:47:00,138 INFO: Ict startup [in C:\Users\tbob3\cits5505\group_project\Italian_Cooking_Tutorial\ict\app\__init__.py:42]
->>>>>>> a1840b2d711b9ebc8bfee3e695334d4bf038be73
-2021-05-17 10:26:19,124 INFO: Ict startup [in /home/xinyuaninori/AgileProject2/ict/app/__init__.py:42]
-2021-05-17 10:31:28,696 INFO: Ict startup [in /home/xinyuaninori/AgileProject2/ict/app/__init__.py:42]
+  File "C:\Users\tbob3\cits5505\group_project\Italian_Cooking_Tutorial\ict\app\routes.py", line 134, in Statistic
+    return jsonify({'count':count, 'Usercount':UP, 'Gradcount':GP}),render_template('Statistic.html', title='Feedback')
+  File "c:\users\tbob3\cits5505\group_project\italian_cooking_tutorial\ict\venv\lib\site-packages\flask\json\__init__.py", line 348, in jsonify
+    f"{dumps(data, indent=indent, separators=separators)}\n",
+  File "c:\users\tbob3\cits5505\group_project\italian_cooking_tutorial\ict\venv\lib\site-packages\flask\json\__init__.py", line 129, in dumps
+    rv = _json.dumps(obj, **kwargs)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.9.1520.0_x64__qbz5n2kfra8p0\lib\json\__init__.py", line 234, in dumps
+    return cls(
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.9.1520.0_x64__qbz5n2kfra8p0\lib\json\encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.9.1520.0_x64__qbz5n2kfra8p0\lib\json\encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "c:\users\tbob3\cits5505\group_project\italian_cooking_tutorial\ict\venv\lib\site-packages\flask\json\__init__.py", line 56, in default
+    return super().default(o)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.9.1520.0_x64__qbz5n2kfra8p0\lib\json\encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type CursorResult is not JSON serializable
+2021-05-17 13:25:02,971 ERROR: Exception on /Statistic [GET] [in c:\users\tbob3\cits5505\group_project\italian_cooking_tutorial\ict\venv\lib\site-packages\flask\app.py:1440]
+Traceback (most recent call last):
+  File "c:\users\tbob3\cits5505\group_project\italian_cooking_tutorial\ict\venv\lib\site-packages\flask\app.py", line 2051, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\tbob3\cits5505\group_project\italian_cooking_tutorial\ict\venv\lib\site-packages\flask\app.py", line 1501, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\tbob3\cits5505\group_project\italian_cooking_tutorial\ict\venv\lib\site-packages\flask\app.py", line 1499, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\tbob3\cits5505\group_project\italian_cooking_tutorial\ict\venv\lib\site-packages\flask\app.py", line 1485, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "c:\users\tbob3\cits5505\group_project\italian_cooking_tutorial\ict\venv\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\tbob3\cits5505\group_project\Italian_Cooking_Tutorial\ict\app\routes.py", line 134, in Statistic
+    return jsonify({'count':count, 'Usercount':UP, 'Gradcount':GP}),render_template('Statistic.html', title='Feedback')
+  File "c:\users\tbob3\cits5505\group_project\italian_cooking_tutorial\ict\venv\lib\site-packages\flask\json\__init__.py", line 348, in jsonify
+    f"{dumps(data, indent=indent, separators=separators)}\n",
+  File "c:\users\tbob3\cits5505\group_project\italian_cooking_tutorial\ict\venv\lib\site-packages\flask\json\__init__.py", line 129, in dumps
+    rv = _json.dumps(obj, **kwargs)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.9.1520.0_x64__qbz5n2kfra8p0\lib\json\__init__.py", line 234, in dumps
+    return cls(
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.9.1520.0_x64__qbz5n2kfra8p0\lib\json\encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.9.1520.0_x64__qbz5n2kfra8p0\lib\json\encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "c:\users\tbob3\cits5505\group_project\italian_cooking_tutorial\ict\venv\lib\site-packages\flask\json\__init__.py", line 56, in default
+    return super().default(o)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.9.1520.0_x64__qbz5n2kfra8p0\lib\json\encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type CursorResult is not JSON serializable
+2021-05-17 13:25:49,746 INFO: Ict startup [in C:\Users\tbob3\cits5505\group_project\Italian_Cooking_Tutorial\ict\app\__init__.py:42]
+2021-05-17 13:26:43,793 INFO: Ict startup [in C:\Users\tbob3\cits5505\group_project\Italian_Cooking_Tutorial\ict\app\__init__.py:42]
+2021-05-17 13:27:14,273 INFO: Ict startup [in C:\Users\tbob3\cits5505\group_project\Italian_Cooking_Tutorial\ict\app\__init__.py:42]
+2021-05-17 13:27:17,858 ERROR: Exception on /Statistic [GET] [in c:\users\tbob3\cits5505\group_project\italian_cooking_tutorial\ict\venv\lib\site-packages\flask\app.py:1440]
+Traceback (most recent call last):
+  File "c:\users\tbob3\cits5505\group_project\italian_cooking_tutorial\ict\venv\lib\site-packages\flask\app.py", line 2051, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\tbob3\cits5505\group_project\italian_cooking_tutorial\ict\venv\lib\site-packages\flask\app.py", line 1501, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\tbob3\cits5505\group_project\italian_cooking_tutorial\ict\venv\lib\site-packages\flask\app.py", line 1499, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\tbob3\cits5505\group_project\italian_cooking_tutorial\ict\venv\lib\site-packages\flask\app.py", line 1485, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "c:\users\tbob3\cits5505\group_project\italian_cooking_tutorial\ict\venv\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\tbob3\cits5505\group_project\Italian_Cooking_Tutorial\ict\app\routes.py", line 134, in Statistic
+    return jsonify({'count':count, 'Usercount':UP, 'Gradcount':GP}),render_template('Statistic.html', title='Feedback')
+  File "c:\users\tbob3\cits5505\group_project\italian_cooking_tutorial\ict\venv\lib\site-packages\flask\json\__init__.py", line 348, in jsonify
+    f"{dumps(data, indent=indent, separators=separators)}\n",
+  File "c:\users\tbob3\cits5505\group_project\italian_cooking_tutorial\ict\venv\lib\site-packages\flask\json\__init__.py", line 129, in dumps
+    rv = _json.dumps(obj, **kwargs)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.9.1520.0_x64__qbz5n2kfra8p0\lib\json\__init__.py", line 234, in dumps
+    return cls(
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.9.1520.0_x64__qbz5n2kfra8p0\lib\json\encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.9.1520.0_x64__qbz5n2kfra8p0\lib\json\encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "c:\users\tbob3\cits5505\group_project\italian_cooking_tutorial\ict\venv\lib\site-packages\flask\json\__init__.py", line 56, in default
+    return super().default(o)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.9.1520.0_x64__qbz5n2kfra8p0\lib\json\encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type CursorResult is not JSON serializable
