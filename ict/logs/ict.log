@@ -61,3 +61,6 @@ werkzeug.routing.BuildError: Could not build url for endpoint 'loginnn'. Did you
 2021-05-15 22:46:29,259 INFO: Ict startup [in C:\Users\tbob3\cits5505\group_project\Italian_Cooking_Tutorial\ict\app\__init__.py:42]
 2021-05-15 22:46:40,559 INFO: Ict startup [in C:\Users\tbob3\cits5505\group_project\Italian_Cooking_Tutorial\ict\app\__init__.py:42]
 2021-05-15 22:47:00,138 INFO: Ict startup [in C:\Users\tbob3\cits5505\group_project\Italian_Cooking_Tutorial\ict\app\__init__.py:42]
+2021-05-17 09:51:01,501 INFO: Ict startup [in C:\Users\tbob3\cits5505\group_project\Italian_Cooking_Tutorial\ict\app\__init__.py:42]
+2021-05-17 09:59:49,256 INFO: Ict startup [in C:\Users\tbob3\cits5505\group_project\Italian_Cooking_Tutorial\ict\app\__init__.py:42]
+2021-05-17 10:30:59,777 INFO: Ict startup [in C:\Users\tbob3\cits5505\group_project\Italian_Cooking_Tutorial\ict\app\__init__.py:42]
